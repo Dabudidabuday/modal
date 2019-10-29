@@ -29,11 +29,17 @@ let email = document.querySelector('.modal__email'),
    submit = document.querySelector('.modal__submit-field');
 
 function collectValue() {
-    let emailValue = String(email.value),
-         passValue = String(pass.value);
-}
+
+    let Data = {
+         emailValue: String(email.value),
+         passValue: String(pass.value),
+    }
+
+    return Data;
+};
+
 
 submit.addEventListener('click', function() {
-    console.log(collectValue()),
+    console.log(collectValue());
     closeModal();
-})
+});
